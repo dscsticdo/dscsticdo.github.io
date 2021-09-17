@@ -7,11 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Bootstrap 5.1 CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="lightbox2-2.11.3/lightbox2-2.11.3/dist/css/lightbox.min.css">
+  <!-- AOS animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <meta name="author" content="GDSC STI CDO" />
   <meta name="description" content="Google Developer Student Clubs are community groups for college and university
     students
@@ -19,23 +23,32 @@
   <meta name="keywords" content="dsc, STI CDO, google developers, DSC STI, dscsticdo" />
   <meta property="og:image" content="img/dsc-logo.png">
 
-  <link rel="icon" type=img/png href="img/dsc-logo.png" sizes="16x16">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
   <title>GDSC STI CDO</title>
 
 </head>
 
 <body id="home">
 
+  <button type="button" class="btn rounded-5 btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
-      <img src="img/gdscsticdo-transparent.png" class="img-fluid ms-4" width="200px" alt="">
-
+      <a href="https://dscsticdo.github.io" class="navbar-brand">
+        <img src="img/gdscsticdo-transparent.png" class="img-fluid ms-4" width="200px" alt="logo">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto me-5">
+        <ul class="navbar-nav ms-auto pe-5">
 
           <li class="nav-item">
             <a class="nav-link" href="#home">Home</a>
@@ -57,19 +70,18 @@
             <a class="nav-link" href="#teams">Teams</a>
           </li>
 
-
         </ul>
       </div>
     </div>
   </nav>
 
-  <img src="img/banner.png" class="img-fluid" alt="banner">
-
-
+  <header>
+    <img src="img/banner.png" alt="bannner" class="img-fluid" data-aos="flip-down">
+  </header>
   <!-- Mission and Vision -->
   <div class="container-fluid overflow-hidden border-bottom border-primary border-3 shadow-lg" id="about-us">
     <div class="row p-4 pb-5 pe-lg-5 pt-lg-5 align-items-center">
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3" data-aos="fade-up-right">
         <h1 class="display-4 fw-bold lh-1">Our Mission and Vision</h1>
         <p class="lead">"Hello there STIers, have you been wondering what our goals and aspirations as a community-run
           developer student club are?
@@ -83,27 +95,29 @@
         </div>
       </div>
 
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+      <div class="col-lg-4 offset-lg-1 p-0 p-sm-2 overflow-hidden shadow-lg mission-vision">
         <a href="img/mission-vision.png" data-alt="mission-vision" data-lightbox="mission-vision">
-          <img class="img-fluid" src="img/mission-vision.png" alt="mission-vision" width="720" loading="lazy">
+          <figure>
+            <img class="img-fluid" src="img/mission-vision.png" alt="mission-vision" width="720" loading="lazy"
+              data-aos="fade-left">
+          </figure>
         </a>
       </div>
     </div>
   </div>
 
-
   <!-- Info -->
 
-  <div class="container-fluid px-5" id="info">
+  <div class="container-fluid px-5 overflow-hidden" id="info">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8" data-aos="fade-right">
         <p class="lead"><small>Google Developer Student Clubs are community groups for college and university
             students
             interested in Google developer technologies.</small>
         </p>
       </div>
-      <div class="col-md-4">
-        <h6>Connect</h6>
+      <div class="col-md-4" data-aos="fade-left">
+        <h5 class="blue">Connect</h5>
         <p>Meet students interested in developer technologies at your university. All are welcome, including those with
           diverse backgrounds and different majors.
         </p>
@@ -111,7 +125,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8" data-aos="fade-right">
         <p class="lead"><small>Students from all undergraduate or graduate programs with an interest in growing as a
             developer
             are welcome. By joining a GDSC, students grow their knowledge in a peer-to-peer learning environment and
@@ -119,48 +133,53 @@
             solutions for local businesses and their community.</small>
         </p>
       </div>
-      <div class="col-md-4">
-        <h6>Learn</h6>
-        <p>Learn about a range of technical topics and gain new skills through hands-on workshops, events, talks, and
-          project-building activities - both online and in-person.
-        </p>
+      <div class="col-md-4" data-aos="fade-left">
+        <h5 class="red">Learn</h6>
+          <p>Learn about a range of technical topics and gain new skills through hands-on workshops, events, talks, and
+            project-building activities - both online and in-person.
+          </p>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-8">
-        <p class="lead"><small>Google Developer Student Clubs is a program supported by Google Developers.</small>
+      <div class="col-md-8" data-aos="fade-right">
+        <p class="lead"><small><span class="blue">Google Developer Student Clubs</span> is a program supported by
+            <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
+              class="blue">g</span><span class="blue">l</span><span class="red">e</span> <span
+              class="text-muted">Developers</span>.</small>
         </p>
       </div>
-      <div class="col-md-4">
-        <h6>Grow</h6>
-        <p>Apply new learnings to build great solutions for local problems. Advance your skills, career, and network.
-          Give back to your community by helping others learn, too.
-        </p>
+      <div class="col-md-4" data-aos="fade-left">
+        <h5 class="green">Grow</h6>
+          <p>Apply new learnings to build great solutions for local problems. Advance your skills, career, and network.
+            Give back to your community by helping others learn, too.
+          </p>
       </div>
     </div>
   </div>
 
+
+
   <div class="b-example-divider"></div>
+  <!-- Chapter Member -->
 
   <div class="container-fluid overflow-hidden px-5 border-bottom border-success border-3 shadow-lg" id="membership">
     <div class="row">
       <div class="col-lg-12">
-        <h4 class="h4 text-center mb-5 fw-bold">Free Membership <code> //Grab Yours Now!</code></h4>
+        <h4 class="h4 text-center my-4 fw-bold" data-aos="slide-up">Free Membership <code>//Grab Yours Now!</code></h4>
       </div>
     </div>
     <div class="row">
-      <!-- Chapter Member -->
       <div class="col-md-6">
         <h5>How to be a Chapter Member at DSC STI CDO</h5>
 
-        <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion accordion-flush" id="accordionFlush" data-aos="slide-right">
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseOne">
-                Step #1
+                <span class="blue">Step #1</span>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
@@ -168,6 +187,11 @@
               <div class="accordion-body">
                 Go to <a href="https://bit.ly/dscsticdo-membership" target="_blank" rel="noopener noreferrer">Google
                   Developer Student Clubs</a> to sign up.
+                <figure>
+                  <a href="img/steps/gdev-sign.png" data-alt="mission-vision" data-lightbox="chapter-member">
+                    <img src="img/steps/gdev-sign.png" alt="" class="img-fluid mt-3">
+                  </a>
+                </figure>
               </div>
             </div>
           </div>
@@ -176,13 +200,19 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo">
-                Step #2
+                <span class="red">Step #2</span>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingTwo">
               <div class="accordion-body">
-                Create an account or enter your google email address.
+                You will be redirect again to STI CDO Chapter and just click <span
+                  class="blue rounded-3 bd-g p-1">Join</span>
+                <figure>
+                  <a href="img/steps/sti-dsc.png" data-alt="mission-vision" data-lightbox="chapter-member">
+                    <img src="img/steps/sti-dsc.png" alt="" class="img-fluid mt-3">
+                  </a>
+                </figure>
               </div>
             </div>
           </div>
@@ -191,14 +221,18 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree">
-                Step #3
+                <span class="green">Step #3</span>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingThree">
               <div class="accordion-body">
-                <img src="img/sample-banner.jpg" alt="" class="img-fluid">
-                Complete the sign-up form and click "Join us."
+                <strong>Success! you're officially part now of the GDSC STI CDO.</strong>
+                <figure>
+                  <a href="img/steps/sti-sucess.png" data-alt="mission-vision" data-lightbox="chapter-member">
+                    <img src="img/steps/sti-sucess.png" alt="" class="img-fluid mt-3">
+                  </a>
+                </figure>
                 </p>
               </div>
             </div>
@@ -208,23 +242,28 @@
       <!--end of col-->
 
       <!-- Badge Member -->
-      <div class="col-md-6">
+      <div class="col-md-6 overflow-hidden">
         <h5>Follow these steps to get a free Members Badge</h5>
 
-        <div class="accordion" id="accordionPanelsStayOpen-Badge">
+        <div class="accordion accordion-flush" id="accordionFlush" data-aos="slide-left">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne-Badge" aria-expanded="true"
-                aria-controls="panelsStayOpen-collapseOne-Badge">
-                Step #1
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <span class="blue">Step #1</span>
               </button>
             </h2>
-            <div id="panelsStayOpen-collapseOne-Badge" class="accordion-collapse collapse show"
-              aria-labelledby="panelsStayOpen-headingOne-Badge">
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+              data-bs-parent="accordionFlush">
               <div class="accordion-body">
                 Visit <a href="https://bit.ly/members-badge." target="_blank" rel="noopener noreferrer">Google
-                  Developers</a>
+                  Developers</a> and click <span class="blue rounded-2 bd-g p-1">create profile</span> to reedeem the
+                membership badge
+                <figure>
+                  <a href="img/steps/create-profile.png" data-alt="mission-vision" data-lightbox="chapter-member">
+                    <img src="img/steps/create-profile.png" alt="" class="img-fluid mt-3">
+                  </a>
+                </figure>
               </div>
             </div>
           </div>
@@ -233,31 +272,43 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseTwo-Badge" aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo-Badge">
-                Step #2
+                <span class="red">Step #2</span>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseTwo-Badge" class="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingTwo-Badge">
               <div class="accordion-body">
-                Sign in with your Gmail account, then click "enter" to redeem your badge, and your badge will be
-                displayed in your <a href="https://developers.google.com/profile/" target="_blank"
-                  rel="noopener noreferrer">Google Developers profile.</a>
+                <strong>Success! you earn the 2021-2022 Google Developer Student Club Member Badge!</strong>
+                <figure>
+                  <a href="img/steps/badge-redeem.png" data-alt="mission-vision" data-lightbox="chapter-member">
+                    <img src="img/steps/badge-redeem.png" alt="" class="img-fluid mt-3">
+                  </a>
+                </figure>
               </div>
             </div>
           </div>
-
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingThree-Badge">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseThree-Badge" aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree-Badge">
-                Step #3
+                <span class="green">Step #3</span>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseThree-Badge" class="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingThree-Badge">
               <div class="accordion-body">
-                <strong>Success! you're officially part now of the GDSC STI CDO.</strong>
+                Go to <a href="https://developers.google.com/profile/" target="_blank" rel="noopener noreferrer">Google
+                  Developers profile.</a> To see your <strong>2021-2022 Google Developer Student Club Member
+                  Badge!</strong>
+
+                <p><span class="red fw-bold">Note</span>: you may see it at All Badges and you might also add it to your
+                  Favorite Badges.</p>
+                <figure>
+                  <a href="img/steps/gdev-profile.png" data-alt="mission-vision" data-lightbox="chapter-member">
+                    <img src="img/steps/gdev-profile.png" class="img-fluid mt-3" alt="gdev profile">
+                  </a>
+                </figure>
               </div>
             </div>
           </div>
@@ -273,7 +324,7 @@
 
   <div class="container-fluid overflow-hidden" id="frame">
     <div class="row p-4 pb-5 pe-lg-5 pt-lg-5 align-items-center rounded-3">
-      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3" data-aos="slide-right">
         <h1 class="display-4 fw-bold lh-1">Get our Fb Frame</h1>
         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem consectetur cum natus
           nostrum repellat ea earum accusantium, exercitationem libero?</p>
@@ -284,10 +335,12 @@
         </div>
       </div>
 
-      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-        <a href="img/framefb.png" data-alt="mission-vision" data-lightbox="fb-frame">
-          <img class="img-fluid" src="img/framefb.png" alt="mission-vision" width="720" loading="lazy">
-        </a>
+      <div class="col-lg-4 offset-lg-1 p-sm-2 overflow-hidden shadow-lg fb-frame" data-aos="fade-left">
+        <figure>
+          <a href="img/framefb.png" data-alt="mission-vision" data-lightbox="fb-frame">
+            <img class="img-fluid" src="img/framefb.png" alt="mission-vision" width="720" loading="lazy">
+          </a>
+        </figure>
       </div>
     </div>
   </div>
@@ -303,8 +356,8 @@
       Events
     </h4>
 
-    <div class="row g-3">
-      <div class="col-md-3">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-3">
+      <div class="col">
         <div class="card text-center">
           <img src="img/events-pics/icon.jpg" class="img-fluid" alt="">
           <div class="card-body">
@@ -326,8 +379,8 @@
       <span class="text-muted">Past</span>
       Events
     </h4>
-    <div class="row g-3">
-      <div class="col-md-3">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-3">
+      <div class="col">
         <div class="card text-center">
           <img src="img/events-pics/tech-talk.jpg" class="img-fluid" alt="">
           <div class="card-body">
@@ -335,11 +388,11 @@
             <h5 class="card-title">Speaker Session/Tech Talk - Virtual</h5>
             <p class="card-text">Cracking the Struggles of I.T Students</p>
             <h6 class="card-subtitle mb-2 text-muted">STI College Cagayan de Oro</h6>
-            <a href="#" class="btn btn-primary">Details</a>
+            <a href="#" class="btn btn-primary mt-4">Details</a>
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col">
         <div class="card text-center">
           <img src="img/events-pics/icon.jpg" class="img-fluid" alt="">
           <div class="card-body">
@@ -351,7 +404,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 ">
+      <div class="col">
         <div class="card text-center">
           <img src="img/events-pics/demo-day.png" class="img-fluid" alt="">
           <div class="card-body">
@@ -363,7 +416,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 ">
+      <div class="col">
         <div class="card text-center" text-center>
           <img src="img/events-pics/cloud-study-jam.jpg" class="img-fluid" alt="">
           <div class="card-body">
@@ -375,10 +428,8 @@
           </div>
         </div>
       </div>
-    </div> <!-- end row -->
 
-    <div class="row mt-4">
-      <div class="col-md-3">
+      <div class="col">
         <div class="card text-center">
           <img src="img/events-pics/icon.jpg" class="img-fluid" alt="">
           <div class="card-body">
@@ -390,7 +441,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col">
         <div class="card text-center">
           <img src="img/events-pics/icon.jpg" class="img-fluid" alt="">
           <div class="card-body">
@@ -402,8 +453,8 @@
           </div>
         </div>
       </div>
-    </div> <!-- end row -->
 
+    </div> <!-- end row -->
   </div> <!-- end container -->
 
   <div class="b-example-divider"></div>
@@ -413,14 +464,16 @@
   <div class="container-fluid px-5" id="teams">
     <h4 class="h4 fw-bold text-center my-5">Meet the Team</h4>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-3">
       <div class="col">
-        <div class="card shadow-sm">
-          <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-          <img src="img/core-team-2021/Adviser.png" class="img-fluid" alt="adviser">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Adviser.png" class="img-fluid" alt="adviser">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">DSC Adviser</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
 
@@ -439,24 +492,29 @@
 
               </div>
 
-            </div> <!-- end d-flex -->
+            </div>
           </div>
         </div>
       </div>
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Flores.png" class="img-fluid" alt="DSC Lead">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Flores.png" class="img-fluid" alt="DSC Lead">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">DSC Lead SY 21 - 22</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
 
               <div class="btn-group" style="font-size: 2rem;">
 
-                <a href="https://facebook.com/Christianpaulh.flores" target="_blank" rel="noopener noreferrer"  class="pe-3">
+                <a href="https://facebook.com/Christianpaulh.flores" target="_blank" rel="noopener noreferrer"
+                  class="pe-3">
                   <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://instagram.com/christianpaulflores" target="_blank" rel="noopener noreferrer" class="pe-3">
+                <a href="https://instagram.com/christianpaulflores" target="_blank" rel="noopener noreferrer"
+                  class="pe-3">
                   <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://twitter.com/Flores_Chrstn" target="_blank" rel="noopener noreferrer" class="pe-3">
@@ -465,7 +523,8 @@
                 <a href="https://github.com/GinoongFlores" target="_blank" rel="noopener noreferrer" class="pe-3">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/christian-paul-flores/" target="_blank" rel="noopener noreferrer" class="pe-3">
+                <a href="https://www.linkedin.com/in/christian-paul-flores/" target="_blank" rel="noopener noreferrer"
+                  class="pe-3">
                   <i class="fab fa-linkedin"></i>
                 </a>
 
@@ -476,12 +535,14 @@
         </div>
       </div>
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Cabigquez.png" class="img-fluid" alt="Founder & Mentor">
-
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Cabigquez.png" class="img-fluid" alt="Founder & Mentor">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Mentor & DSC Lead SY 20 - 21 </h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
 
@@ -505,12 +566,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Montejo.png" class="img-fluid" alt="Founder & Mentor">
-
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Montejo.png" class="img-fluid" alt="Founder & Mentor">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Mentor & Founder</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
 
               <div class="btn-group" style="font-size: 2rem;">
@@ -535,12 +598,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Lumod.png" class="img-fluid" alt="Design Lead">
-
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Lumod.png" class="img-fluid" alt="Design Lead">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Design Lead</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
 
               <div class="btn-group" style="font-size: 2rem;">
@@ -563,12 +628,14 @@
         </div>
       </div>
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Santiago.jpg" class="img-fluid" alt="Design Lead">
-
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Santiago.jpg" class="img-fluid" alt="Design Lead">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Creative Lead</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
 
               <div class="btn-group" style="font-size: 2rem;">
@@ -592,13 +659,15 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Salise.png" class="img-fluid" alt="Lead Writer">
-
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Salise.png" class="img-fluid" alt="Lead Writer">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Lead Writer</h5>
 
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
 
               <div class="btn-group" style="font-size: 2rem;">
@@ -622,13 +691,15 @@
         </div>
       </div>
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Llanes.png" class="img-fluid" alt="Event Lead">
-
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Llanes.png" class="img-fluid" alt="Event Lead">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Event Lead</h5>
 
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
 
               <div class="btn-group" style="font-size: 2rem;">
@@ -652,11 +723,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Barbado.png" class="img-fluid" alt="Events Coordinator">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Barbado.png" class="img-fluid" alt="Events Coordinator">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Events Coordinator</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -678,11 +752,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Madrid.png" class="img-fluid" alt="Events Coordinator">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Madrid.png" class="img-fluid" alt="Events Coordinator">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Events Coordinator</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -704,11 +781,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Cabeltes.png" class="img-fluid" alt="Events Coordinator">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Cabeltes.png" class="img-fluid" alt="Events Coordinator">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Events Coordinator</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -730,11 +810,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Los-Baños.png" class="img-fluid" alt="Events Coordinator">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Los-Baños.png" class="img-fluid" alt="Events Coordinator">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Events Coordinator</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -756,11 +839,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Magcalipay.png" class="img-fluid" alt="Events Coordinator">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Magcalipay.png" class="img-fluid" alt="Events Coordinator">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Events Coordinator</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -782,11 +868,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Sales.png" class="img-fluid" alt="Events Coordinator">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Sales.png" class="img-fluid" alt="Events Coordinator">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Events Coordinator</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -808,11 +897,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Sobremonte.png" class="img-fluid" alt="Events Coordinator">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Sobremonte.png" class="img-fluid" alt="Events Coordinator">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Events Coordinator</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -834,11 +926,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2020/Mondano.png" class="img-fluid" alt="Social Media Manager">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2020/Mondano.png" class="img-fluid" alt="Social Media Manager">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Social Media Manager</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -860,11 +955,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Duarte.png" class="img-fluid" alt="Social Media Manager">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Duarte.png" class="img-fluid" alt="Social Media Manager">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Social Media Manager</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -885,13 +983,16 @@
         </div>
       </div>
 
-      
+
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Dalapo.png" class="img-fluid" alt="Lead Secretariat">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Dalapo.png" class="img-fluid" alt="Lead Secretariat">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Lead Secretariat</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -913,11 +1014,14 @@
       </div>
 
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="img/core-team-2021/Emnacin.png" class="img-fluid" alt="Lead Secretariat">
+        <div class="card shadow-sm teams-pic">
+          <figure>
+            <img src="img/core-team-2021/Emnacin.png" class="img-fluid" alt="Lead Secretariat">
+          </figure>
           <div class="card-body">
             <h5 class="card-title text-center">Lead Secretariat</h5>
-            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
+            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus praesentium
+              labore porro quae quasi, dolore ullam voluptatum nihil provident aperiam.</p>
             <div class="d-flex justify-content-center align-items-center">
               <div class="btn-group" style="font-size: 2rem;">
                 <a href="" class="pe-3" target="_blank" rel="noopener noreferrer">
@@ -961,16 +1065,18 @@
             <a href="https://twitter.com/dscsticdo" target="_blank" rel="noopener noreferrer" class="pe-3">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCdtdu9-m3cL0BzYtyqzjAAg"  target="_blank" rel="noopener noreferrer" class="pe-3">
+            <a href="https://www.youtube.com/channel/UCdtdu9-m3cL0BzYtyqzjAAg" target="_blank" rel="noopener noreferrer"
+              class="pe-3">
               <i class="fab fa-youtube"></i>
             </a>
             <a href="https://github.com/dscsticdo" target="_blank" rel="noopener noreferrer" class="pe-3">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/company/google-developer-student-clubs-sti-college-cagayan-de-oro/mycompany" class="pe-3">
+            <a href="https://www.linkedin.com/company/google-developer-student-clubs-sti-college-cagayan-de-oro/mycompany"
+              class="pe-3">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="mailto:dsc.sticdo@gmail.com"  target="_blank" rel="noopener noreferrer" class="pe-3">
+            <a href="mailto:dsc.sticdo@gmail.com" target="_blank" rel="noopener noreferrer" class="pe-3">
               <i class="fas fa-envelope"></i>
             </a>
           </div>
@@ -979,12 +1085,14 @@
         <div class="col-md-4 my-3 d-flex flex-column">
           <h5>Partners</h5>
           <p class="my-2">
-            <a href="https://developers.google.com/" target="_blank" rel="noopener noreferrer" class="footer-links" target="_blank" rel="noopener noreferrer">Google
+            <a href="https://developers.google.com/" target="_blank" rel="noopener noreferrer" class="footer-links"
+              target="_blank" rel="noopener noreferrer">Google
               Developers</a>
           </p>
-          
+
           <p>
-            <a href="https://developers.google.com/community/dsc" target="_blank" rel="noopener noreferrer" class="footer-links" target="_blank" rel="noopener noreferrer">Google
+            <a href="https://developers.google.com/community/dsc" target="_blank" rel="noopener noreferrer"
+              class="footer-links" target="_blank" rel="noopener noreferrer">Google
               Developers Student Clubs</a>
           </p>
         </div>
@@ -996,7 +1104,8 @@
             <br>
             Cagayan de Oro, Philippines</p>
           <h5>Email</h5>
-          <p> <a href="mailto:dsc.sticdo@gmail.com" target="_blank" rel="noopener noreferrer" class="footer-links">dsc.sticdo@gmail.com</a></p>
+          <p> <a href="mailto:dsc.sticdo@gmail.com" target="_blank" rel="noopener noreferrer"
+              class="footer-links">dsc.sticdo@gmail.com</a></p>
         </div>
 
       </div>
@@ -1009,6 +1118,40 @@
   </script>
 
   <script src="lightbox2-2.11.3/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="aos-master/dist/aos.js"></script> -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      mirror: true,
+    });
+
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
 </body>
 

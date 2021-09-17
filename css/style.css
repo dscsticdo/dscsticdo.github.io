@@ -1,34 +1,85 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* Google Core Colors */
+	--blue-color: #4285F4;
+	--red-color: #EA4335;
+	--yellow-color: #FBBC04;
+	--green-color: #34A853;
+}
+
+.blue {
+	color: var(--blue-color);
+}
+
+.red {
+	color: var(--red-color);
+}
+
+.green {
+	color: var(--green-color);
+}
+
+.yellow {
+	color: var(--yellow-color);
+}
+
+#spinner {
+	width: 1.5rem;
+	height: 1.5rem;
 }
 
 @font-face {
-    font-family: 'GoogleSans';
-    src: url(../fonts/GoogleSans-Regular-v1.27.ttf);
-
+	font-family: 'GoogleSans';
+	src: url(../fonts/GoogleSans-Regular-v1.27.ttf);
 }
 
 html,
 body {
-    font-family: 'GoogleSans' !important;
+	overflow-x: hidden;
+	font-family: 'GoogleSans' !important;
 }
 
+
 nav li a {
-    font-weight: 800;
+	font-weight: 800;
 }
 
 nav li a:hover {
-    color: #4285F4 !important;
+	color: #4285F4 !important;
 }
 
-nav li a:active {
-    color: #34A853 !important;
-}
 
+/* button to top */
+#btn-back-to-top {
+	position: fixed;
+	background-color: var(--green-color);
+	border-radius: 50%;
+	color: #fff;
+	border: none;
+	bottom: 1.25rem;
+	right: 1.25rem;
+	z-index: 1;
+	display: none;
+}
 
 #membership a {
-    text-decoration: none;
+	text-decoration: none;
+}
+
+#membership a:hover {
+	text-decoration: underline;
+}
+
+#membership .accordion-body .blue {
+	color: #fff;
+}
+
+.bd-g {
+	background-color: var(--blue-color);
 }
 
 #about-us,
@@ -37,41 +88,253 @@ nav li a:active {
 #events,
 #frame,
 #teams {
-    padding: 6.25rem 0;
+	padding: 6.25rem 0;
 }
 
 .b-example-divider {
-    height: 2rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+	height: 2rem;
+	background-color: rgba(0, 0, 0, .1);
+	border: solid rgba(0, 0, 0, .15);
+	border-width: 1px 0;
+	box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
 }
 
 .footer-links {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .fa-facebook {
-    color: #3b5998;
+	color: #3b5998;
 }
 
 .fa-twitter {
-    color: #1da1f2;
+	color: #1da1f2;
 }
 
 .fa-instagram {
-    color: #c32aa3;
+	color: #c32aa3;
 }
 
 .fa-Linkedin {
-    color: #0a66c2;
+	color: #0a66c2;
 }
 
 .fa-github {
-    color: #333;
+	color: #333;
 }
 
 .fa-youtube {
-    color: #bb0000;
+	color: #bb0000;
 }
+
+.btn-group a i:hover {
+	color: #495057;
+}
+
+figure {
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+}
+
+
+/* Mission Vision Effects */
+
+
+/* Zoom in */
+.mission-vision figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.mission-vision figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
+/* Shine */
+.mission-vision figure {
+	position: relative;
+}
+
+.mission-vision figure:before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+
+.mission-vision figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+/* Chapter Member Effects */
+.accordion-body figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.accordion-body figure:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+/* FB frame Effects */
+
+
+/* Zoom in */
+.fb-frame figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.fb-frame figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
+/* Shine */
+.fb-frame figure {
+	position: relative;
+}
+
+.fb-frame figure:before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+
+.fb-frame figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+/* Teams Effects */
+
+/* Flashing */
+
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Zoom in */
+
+.teams-pic figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.teams-pic figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.teams-pic figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+
+/* Media queries */
+/* // No media query for `xs` since this is the default in Bootstrap */
+
+/* // `xs` returns only a ruleset and no media query
+// ... { ... } */
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.btn-group a {
+		font-size: 1.5rem;
+	}
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.btn-group a {
+		font-size: 1.8rem;
+	}
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+	.mission-vision figure,
+	.fb-frame figure {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
