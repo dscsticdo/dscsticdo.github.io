@@ -356,10 +356,10 @@ figure {
 }
 
 /* // `xl` applies to large devices (desktops, less than 1200px) */
-/* @media (max-width: 1199.98px) {} */
+@media (max-width: 1199.98px) {}
 
 /* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
-/* @media (max-width: 1399.98px) {} */
+@media (max-width: 1399.98px) {}
 
 
 
