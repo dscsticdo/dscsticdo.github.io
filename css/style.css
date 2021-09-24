@@ -60,6 +60,9 @@ nav li a:hover {
 	color: #4285F4 !important;
 }
 
+code {
+	color: var(--red-color) !important;
+}
 
 /* button to top */
 #btn-back-to-top {
