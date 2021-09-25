@@ -106,6 +106,9 @@ code {
 	padding: 6.25rem 0;
 }
 
+#info p.lead, #info p{
+	text-align: justify;
+}
 .b-example-divider {
 	height: 2rem;
 	background-color: rgba(0, 0, 0, .1);
