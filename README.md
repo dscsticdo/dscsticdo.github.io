@@ -1,11 +1,10 @@
-- 👋 Hi, I’m @dscsticdo
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- Testing
-- Testing again
-<!---
-dscsticdo/dscsticdo is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+# GDSC STI CDO Official Website 
+## Follow us 
+
+<a href="https://twitter.com/dscsticdo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="dscsticdo" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/company/google-developer-student-clubs-sti-college-cagayan-de-oro/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="google-developer-student-clubs-sti-college-cagayan-de-oro" height="30" width="40" /></a>
+<a href="https://fb.com/dscsticdo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="dscsticdo" height="30" width="40" /></a>
+<a href="https://instagram.com/dscsticdo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="dscsticdo" height="30" width="40" /></a>
+<a href="https://www.youtube.com/channel/UCdtdu9-m3cL0BzYtyqzjAAg" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="dscsticdo" height="30" width="40" /></a>
+<a href="https://discord.gg/https://discord.gg/by4m996hnY" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="https://discord.gg/by4m996hnY" height="30" width="40" /></a>
+</p>
