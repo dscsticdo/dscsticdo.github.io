@@ -1,4 +1,6 @@
 # GDSC STI CDO Official Website 
+
+We are an organization at STI College Cagayan de Oro that aims to enhance the students' skills and knowledge of Google technology. And with this knowledge, we encourage students to build solutions for the community using Google technologies.
 ## Follow us 
 
 <a href="https://twitter.com/dscsticdo" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="dscsticdo" height="30" width="40" /></a>
