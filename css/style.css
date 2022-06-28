@@ -110,7 +110,8 @@ code {
 #info,
 #events,
 #frame,
-#teams {
+#teams,
+#partners {
 	padding: 6.25rem 0;
 }
 
@@ -359,6 +360,27 @@ figure {
 	opacity: 1;
 	-webkit-animation: flash 1.5s;
 	animation: flash 1.5s;
+}
+
+/* Partners */
+
+#partners img {
+	width: 300px;
+	height: auto;
+}
+
+#partners .sponsors {
+	margin: 0;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+	width: 16.66666667%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: relative;
+	float: none;
+	display: inline-block;
+	height: 150px;
 }
 
 /* Media queries */
